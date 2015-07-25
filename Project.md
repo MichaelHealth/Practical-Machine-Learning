@@ -8,3 +8,14 @@ For this project, we are given data from accelerometers on the belt, forearm, ar
 The data for this project come from this source: http://groupware.les.inf.puc-rio.br/har.
 
 This is the code I used to make the calculation
+
+
+Data Preparation
+I load the caret package, and read in the training and testing data:
+
+library(caret)
+## Loading required package: lattice
+## Loading required package: ggplot2
+ptrain <- read.csv("pml-training.csv")
+ptest <- read.csv("pml-testing.csv")
+Because I want to be able to estimate the out-of-sample error, I randomly split the full training data (ptrain) into a smaller training set (ptrain1) and a validation set (ptrain2):
