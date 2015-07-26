@@ -11,6 +11,7 @@ The R script below uses analyzes the trianng data with random forest and is able
 
 >ptrain <- read.csv("pml-training.csv")
 >ptest <- read.csv("pml-testing.csv")
+
 Because I want to be able to estimate the out-of-sample error, I randomly split the full training data (ptrain) into a smaller training set (ptrain1) and a validation set (ptrain2):
 
 >library(caret)
