@@ -297,5 +297,5 @@ E    0    0    0    4 3603 0.0011089548
 ![alt tag](https://cloud.githubusercontent.com/assets/10700001/8892358/ad569a0c-3322-11e5-8a88-2988c1fdce00.png)
 
 *This shows the impact of each of the variables in calcualting the prediction using Training*
-![alt tag](https://cloud.githubusercontent.com/assets/10700001/8892358/ad569a0c-3322-11e5-8a88-2988c1fdce00.png)
+![alt tag](https://cloud.githubusercontent.com/assets/10700001/8892360/d4ffb016-3322-11e5-97de-02401bf56c40.png)
 
