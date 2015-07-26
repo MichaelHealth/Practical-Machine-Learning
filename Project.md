@@ -1,14 +1,14 @@
 
 Practical Machine Learning Project
 Introduction
-The data for this project comes form 6 participants in a study who perform weightlifting exercises with accelerometers on the 
+The data for this project comes form 6 participants in a study who perform weightlifting exercises with accelerometers on their bodies and on the weights they are lifting.  The goal of the study was to be able to calssify the motions of the bodies and weights and identify each of the participants.  A training data set was created with the study subjects identities and a testing data was created without the subjects identified.  
+The R script below uses analyzes the trianng data with random forest and is able to determone the study participants on the testing set.
 
 
 
 
 library(caret)
-## Loading required package: lattice
-## Loading required package: ggplot2
+
 ptrain <- read.csv("pml-training.csv")
 ptest <- read.csv("pml-testing.csv")
 Because I want to be able to estimate the out-of-sample error, I randomly split the full training data (ptrain) into a smaller training set (ptrain1) and a validation set (ptrain2):
