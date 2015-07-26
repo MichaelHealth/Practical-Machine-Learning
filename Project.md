@@ -3,30 +3,29 @@
 ###Introduction
 #####The data for this project comes form 6 participants in a study who perform weightlifting exercises with accelerometers on their bodies and on the weights they are lifting.  The goal of the study was to be able to classify the motions of the bodies and weights and identify each of the participants.  A training data set was created with the study subjects identities and a testing data was created without the subjects identified.  
 The R script below uses analyzes the trianng data with random forest and is able to determone the study participants on the testing set.
-```
-function test() {
-  console.log("notice the blank line before this function?");
-}
-```
->library(caret)
 
->ptrain <- read.csv("pml-training.csv")
-
->ptest <- read.csv("pml-testing.csv")
+```
+library(caret)
+setwd("C:/Users/Mike/Documents/testdir/ML")
+training <- read.csv("pml-training.csv")
+testing <- read.csv("pml-testing.csv")
+```
 
 #####This sets my home directory and loads the training and testing files into data frames
-
+```
 >library(caret)
 setwd("C:/Users/Mike/Documents/testdir/ML")
 training <- read.csv("pml-training.csv")
 testing <- read.csv("pml-testing.csv")
+```
 
 ##### This breaks the training data into two partitions
+```
 >set.seed(12345)
 setTrain <- createDataPartition(y=training$classe, p=0.7, list=F)
 training1 <- training[setTrain, ]
 training2 <- training[-setTrain, ]
-
+```
 #####This detects and removes variables which are close to zero 
 >zvar <- nearZeroVar(training1)
 training1 <- training1[, -zvar]
