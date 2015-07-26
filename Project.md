@@ -1,23 +1,23 @@
 
 #Practical Machine Learning Project
-#Introduction
+###Introduction
 The data for this project comes form 6 participants in a study who perform weightlifting exercises with accelerometers on their bodies and on the weights they are lifting.  The goal of the study was to be able to calssify the motions of the bodies and weights and identify each of the participants.  A training data set was created with the study subjects identities and a testing data was created without the subjects identified.  
 The R script below uses analyzes the trianng data with random forest and is able to determone the study participants on the testing set.
 
 
 
 
-library(caret)
+>library(caret)
 
-ptrain <- read.csv("pml-training.csv")
-ptest <- read.csv("pml-testing.csv")
+>ptrain <- read.csv("pml-training.csv")
+>ptest <- read.csv("pml-testing.csv")
 Because I want to be able to estimate the out-of-sample error, I randomly split the full training data (ptrain) into a smaller training set (ptrain1) and a validation set (ptrain2):
 
-library(caret)
-#This sets my hone direcotry and loads the training and testing files into data frames
-setwd("C:/Users/Mike/Documents/testdir/ML")
-training <- read.csv("pml-training.csv")
-testing <- read.csv("pml-testing.csv")
+>library(caret)
+This sets my home direcotry and loads the training and testing files into data frames
+>setwd("C:/Users/Mike/Documents/testdir/ML")
+>training <- read.csv("pml-training.csv")
+>testing <- read.csv("pml-testing.csv")
 
 # This breaks the training data into two partitions
 set.seed(12345)
