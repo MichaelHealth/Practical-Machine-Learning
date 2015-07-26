@@ -2,7 +2,8 @@
 #Practical Machine Learning Project
 ###Introduction
 *The data for this project comes form 6 participants in a study who perform weightlifting exercises with accelerometers on their bodies and on the weights they are lifting.  The goal of the study was to be able to classify the motions of the bodies and weights and identify each of the participants.  A training data set was created with the study subjects identities and a testing data was created without the subjects identified.  
-The R script below uses analyzes the trianng data with random forest and is able to determone the study participants on the testing set.
+The training data is partitioned into training1 and training2 on a 70-30 split.  The traing1 data set is then analyzed and tested againt training2 using randon forest. After seeing if the results are satisfactory the entire trianing set is then analyzed and tested against the testing set.  All of the indiivduals are correctly identified.
+The R script below uses analyzes the trianing data with random forest and is able to determone the study participants on the testing set.
 It is followed by the command line input and output while the script is run and then by plots of the variable imporatnce from the partiition training1 and the full training set*
 
 ```
