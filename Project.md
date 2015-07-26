@@ -52,12 +52,12 @@ Train is used on training1 with 3-fold cross validation.*
 weights <- trainControl(method="cv", number=3, verboseIter=TRUE)
 dim(training1)
 ```
-* weight model on training1*
+*Weight model on training1*
 ```
 weight <- train(classe ~., data=training1, method="rf", trControl=weights)
 weight$finalModel
 ```
-*plot the output to see the impact the variables used in trianing1*
+*Plot the output to see the impact the variables used in trianing1*
 ```
 plot(varImp(weight))
 ```
@@ -84,8 +84,8 @@ testing <- testing[, bigNA==FALSE]
 training <- training[, -(1:5)]
 testing <- testing[, -(1:5)]
 ```
-8This is using a Random Forest model to check on the accuracy. 
-Train is used on training with 3-fold cross validation.8
+*This is using a Random Forest model to check on the accuracy. 
+Train is used on training with 3-fold cross validation.*
 ```
 weights <- trainControl(method="cv", number=3, verboseIter=TRUE)
 weight <- train(classe ~ ., data=training, method="rf", trControl=weights)
@@ -100,7 +100,7 @@ results <- predict(weight, newdata=testing)
 results <- as.character(results)
 plot(varImp(weight))
 ```
-* This is the function which writes the predicitons to a directory so they can be entered*
+*This is the function which writes the predicitons to a directory so they can be entered*
 ```
 pml_write_files <- function(x) {
   n <- length(x)
