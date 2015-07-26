@@ -293,7 +293,9 @@ E    0    0    0    4 3603 0.0011089548
 + }
 > pml_write_files(results)
 ```
-https://cloud.githubusercontent.com/assets/10700001/8892358/ad569a0c-3322-11e5-8a88-2988c1fdce00.png
+*This plot shows the impact of each of the variables in calcualting the prediction using Training1*
+![alt tag](https://cloud.githubusercontent.com/assets/10700001/8892358/ad569a0c-3322-11e5-8a88-2988c1fdce00.png)
 
+*This shows the impact of each of the variables in calcualting the prediction using Training*
 ![alt tag](https://cloud.githubusercontent.com/assets/10700001/8892358/ad569a0c-3322-11e5-8a88-2988c1fdce00.png)
 
